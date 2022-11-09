@@ -1,9 +1,9 @@
 import "./register.scss"
 
-const register = () => {
+const Register = () => {
   return (
     <div className="register">register</div>
   )
 }
 
-export default register
+export default Register
