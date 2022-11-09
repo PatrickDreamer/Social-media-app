@@ -1,12 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
-import login from './pages/login/login';
+import Login from './pages/login/Login';
 
 
 function App() {
   return (
    <div>
-    <login />
+    <Login />
    </div>
   );
 }
