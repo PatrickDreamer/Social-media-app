@@ -10,6 +10,8 @@
         background-color: white;
         border-radius: 10px;
         min-height: 600px;
+        overflow:hidden;
+
         .left{
             flex: 1;
             background: linear-gradient(rgba(39,11,96,0.5), rgba(95, 77, 132, 0.5) ), 
@@ -20,11 +22,14 @@
             flex-direction: column;
             gap:30px;
             color: white;
+
             h1{
                 font-size: 100px;
                 line-height: 100px;
             }
-            p{}
+            p{
+                font-size: 14px;
+            }
             span{
                 font-size: 14px;
             }
