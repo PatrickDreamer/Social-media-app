@@ -16,6 +16,7 @@ const Navbar = () => {
         <div className='left'>
             <Link to="/" style={{textDecoration:"none"}}>
              <span>lamasocial</span> 
+             </Link>
              <HomeOutlinedIcon />
              <DarkModeOutlinedIcon/>
              <GridViewOutlinedIcon/>
@@ -24,7 +25,6 @@ const Navbar = () => {
                 <input type="text" placeholder='Search...' />
              </div>
 
-            </Link>
 
         </div>
         <div className='right'>
@@ -32,7 +32,7 @@ const Navbar = () => {
             <EmailOutlinedIcon/>
             <NotificationsNoneOutlinedIcon/>
             <div className="user">
-                <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.bbc.com%2Fnews%2Fav%2Fentertainment-arts-62335678&psig=AOvVaw1XuI3S4iyBGkmCmF2PAAJ9&ust=1668167483538000&source=images&cd=vfe&ved=0CA8QjRxqFwoTCMDZ8KPGo_sCFQAAAAAdAAAAABAJ" alt=""/>
+                <img src="https://www.befunky.com/images/prismic/57b2c48e-0268-4868-9bad-e295ae1d575c_landing-photo-to-cartoon-img6.jpeg?auto=avif,webp&format=jpg&width=863" alt=""/>
                 <span>John Doe</span>
             </div>
         </div>

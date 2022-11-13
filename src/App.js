@@ -1,5 +1,5 @@
 import logo from './logo.svg';
-import './App.css';
+import './style.scss';
 import {
   createBrowserRouter,
   RouterProvider,
@@ -21,14 +21,15 @@ function App() {
   const currentUser = true;
   const Layout = ()=> {
     return(
-      <div>
+      <div className='theme-dark'>
         <Navbar />
         <div>
           <div style={{display: "flex"}}>
             <LeftBar/>
-            <RightBar/>
-            <Outlet />
-            <RightBar/>
+            <div style={{flex:6}}>
+              <Outlet />
+            </div>
+             <RightBar/>
           </div>
         </div>
       </div>
