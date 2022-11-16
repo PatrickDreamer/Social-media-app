@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import "./navbar.scss"
 import {
    Link,
@@ -10,7 +10,11 @@ import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 import Person2OutlinedIcon from '@mui/icons-material/Person2Outlined';
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNoneOutlined';
+import { DarkModeContext } from '../../context/darkModeContext';
+
 const Navbar = () => {
+  const {toggle} = useContext(DarkModeContext);
+
   return (
     <div className='navbar'>
         <div className='left'>
@@ -18,7 +22,7 @@ const Navbar = () => {
              <span>lamasocial</span> 
              </Link>
              <HomeOutlinedIcon />
-             <DarkModeOutlinedIcon/>
+             <DarkModeOutlinedIcon onClick={toggle}/>
              <GridViewOutlinedIcon/>
              <div className="search">
                 <SearchOutlinedIcon/>

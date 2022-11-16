@@ -27,7 +27,7 @@ function App() {
   console.log("darkMode", darkMode);
   const Layout = ()=> {
     return(
-      <div className='theme-dark'>
+      <div className={`theme-${darkMode?"dark":"light"}`}>
         <Navbar />
         <div>
           <div style={{display: "flex"}}>
