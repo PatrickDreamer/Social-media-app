@@ -11,9 +11,12 @@ import Person2OutlinedIcon from '@mui/icons-material/Person2Outlined';
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNoneOutlined';
 import { DarkModeContext } from '../../context/darkModeContext';
+import WbSunnyOutlinedIcon from '@mui/icons-material/WbSunnyOutlined';
+import { AuthModeContext } from '../../context/authContext';
 
 const Navbar = () => {
-  const {toggle} = useContext(DarkModeContext);
+  const {darkMode,toggle} = useContext(DarkModeContext);
+  const {currentUser} = useContext(AuthModeContext);
 
   return (
     <div className='navbar'>
@@ -22,7 +25,7 @@ const Navbar = () => {
              <span>lamasocial</span> 
              </Link>
              <HomeOutlinedIcon />
-             <DarkModeOutlinedIcon onClick={toggle}/>
+            { darkMode? <DarkModeOutlinedIcon onClick={toggle}/>:<WbSunnyOutlinedIcon onClick={toggle}/>}
              <GridViewOutlinedIcon/>
              <div className="search">
                 <SearchOutlinedIcon/>
@@ -36,8 +39,8 @@ const Navbar = () => {
             <EmailOutlinedIcon/>
             <NotificationsNoneOutlinedIcon/>
             <div className="user">
-                <img src="https://www.befunky.com/images/prismic/57b2c48e-0268-4868-9bad-e295ae1d575c_landing-photo-to-cartoon-img6.jpeg?auto=avif,webp&format=jpg&width=863" alt=""/>
-                <span>John Doe</span>
+                <img src={currentUser.profilePic} alt=""/>
+                <span>{currentUser.name}</span>
             </div>
         </div>
     
