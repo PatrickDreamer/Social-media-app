@@ -12,11 +12,11 @@ import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNoneOutlined';
 import { DarkModeContext } from '../../context/darkModeContext';
 import WbSunnyOutlinedIcon from '@mui/icons-material/WbSunnyOutlined';
-import { AuthModeContext } from '../../context/authContext';
+import { AuthContext } from '../../context/authContext';
 
 const Navbar = () => {
   const {darkMode,toggle} = useContext(DarkModeContext);
-  const {currentUser} = useContext(AuthModeContext);
+  const {currentUser} = useContext(AuthContext);
 
   return (
     <div className='navbar'>

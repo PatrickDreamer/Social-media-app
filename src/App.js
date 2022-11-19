@@ -19,10 +19,11 @@ import Profile from './pages/profile/Profile';
 import { DarkMode } from '@mui/icons-material';
 import { DarkModeContext } from './context/darkModeContext';
 import { convertLength } from '@mui/material/styles/cssUtils';
+import { AuthContext } from './context/authContext';
 
 
 function App() {
-  const currentUser = true;
+  const {currentUser} = useContext(AuthContext);
   const {darkMode} = useContext(DarkModeContext);
   console.log("darkMode", darkMode);
   const Layout = ()=> {

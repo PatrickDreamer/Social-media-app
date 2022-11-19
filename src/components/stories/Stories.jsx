@@ -1,12 +1,11 @@
 import React from 'react'
 import { useContext } from 'react';
-import { AuthModeContext } from '../../context/authContext';
+import { AuthContext } from '../../context/authContext';
 import "./stories.scss"
 
 
-
 const Stories = () => {
-    const {currentUser} = useContext(AuthModeContext);
+    const {currentUser} = useContext(AuthContext);
     const stories = [
         {
             id:1,
