@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './style.scss';
 import {
   createBrowserRouter,
@@ -14,11 +13,8 @@ import Login from './pages/login/login';
 import Navbar from './components/navbar/navbar';
 import LeftBar from './components/leftBar/leftBar';
 import RightBar from './components/rightBar/rightBar';
-import { Children } from 'react';
 import Profile from './pages/profile/Profile';
-import { DarkMode } from '@mui/icons-material';
 import { DarkModeContext } from './context/darkModeContext';
-import { convertLength } from '@mui/material/styles/cssUtils';
 import { AuthContext } from './context/authContext';
 
 
@@ -52,7 +48,12 @@ function App() {
   const router = createBrowserRouter([
     {
       path:"/",
-      element:<Layout/>,
+      element:(
+      <ProtectedRoute>
+        <Layout/>
+      </ProtectedRoute>
+      ),
+
       children:[
         {
           path:"/",

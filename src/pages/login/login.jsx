@@ -1,10 +1,7 @@
 import React, { useContext } from 'react'
 import "./login.scss"
 import {AuthContext} from "../../context/authContext"
-import {
-  Link
-} from "react-router-dom";
-
+import {Link} from "react-router-dom";
 
 const Login = () => {
   const {login} = useContext(AuthContext);
@@ -36,6 +33,6 @@ const Login = () => {
 
     </div>
   )
-}
+};
 
-export default Login
+export default Login;

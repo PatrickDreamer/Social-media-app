@@ -1,4 +1,4 @@
-import Posts from "../../components/posts/posts"
+import Posts from "../../components/posts/Posts"
 import Stories from "../../components/stories/Stories"
 import "./home.scss"
 
@@ -11,4 +11,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default Home;

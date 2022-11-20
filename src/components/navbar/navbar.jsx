@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import "./navbar.scss"
 import {
-   Link,
+   Link
   } from "react-router-dom";
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
@@ -48,4 +48,4 @@ const Navbar = () => {
   )
 }
 
-export default Navbar
+export default Navbar;

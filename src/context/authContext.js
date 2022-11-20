@@ -1,19 +1,27 @@
-import { Children, createContext,useState, useEffect } from "react";
+import { createContext, useState, useEffect } from "react";
 
 export const AuthContext = createContext();
 
-export const AuthContextProvider  = ({Children}) => {
+export const AuthContextProvider  = ({children}) => {
     const [currentUser, setCurrentUser] = useState(
         JSON.parse(localStorage.getItem("user")) || null
     );
     const login = () => {
-       setCurrentUser({id:1, name:"John Doe", profilePic:"https://www.befunky.com/images/prismic/57b2c48e-0268-4868-9bad-e295ae1d575c_landing-photo-to-cartoon-img6.jpeg?auto=avif,webp&format=jpg&width=863"})
+        setCurrentUser({
+            id: 1,
+            name: "John Doe",
+            profilePic:
+              "https://images.pexels.com/photos/3228727/pexels-photo-3228727.jpeg?auto=compress&cs=tinysrgb&w=1600",
+          });
+
     }
+    console.log("currentUser", currentUser);
+
     useEffect(()=>{
-        localStorage.setItem("user", currentUser)
+        localStorage.setItem("user", JSON.stringify(currentUser));
     },[currentUser])
 
     return (
-        <AuthContext.Provider value={{currentUser, login}}>{Children}</AuthContext.Provider>
+        <AuthContext.Provider value={{currentUser, login}}>{children}</AuthContext.Provider>
     )
 }
