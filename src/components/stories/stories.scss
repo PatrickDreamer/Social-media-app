@@ -8,16 +8,24 @@
       height: 50px;
       justify-content: space-between;
     }
+    @include tablet{
+      height: 200px;
+      justify-content: space-between;
+    }
     .story{
         flex:1;
         border-radius: 10px;
         overflow: hidden;
         position: relative;
         @include mobile{
-          flex: none;
-          width: 50px;
+
           height: 50px;
-          border-radius: 50%;
+          justify-content: space-between;
+        }
+        @include tablet{
+          
+          height: 150px;
+          gap: 20px;
         }
         img{
             width: 100%;

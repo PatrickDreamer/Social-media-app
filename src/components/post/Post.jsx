@@ -8,6 +8,7 @@ import ShareOutlinedIcon from "@mui/icons-material/ShareOutlined";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 import { Link } from "react-router-dom";
 import Comments from "../comments/Comments";
+
 const Post = ({post})=>{
     const [commentOpen, setCommentOpen] = useState(false);
     //temporary
